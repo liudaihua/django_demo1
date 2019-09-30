@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+
+    {% block func %}
+     <div style="width: 97%;margin: 0 auto">
+     <button class="btn btn-default" id= "add" type="submit">新增</button>
+     </div>
+    {% endblock %}
+
+{% block content %}
+
+    <table border="1" width="97%" >
+        <thead>
+        <tr id="thead" style="text-align: center">
+            <th> ID</th>
+            <th>名称</th>
+        </tr>
+        </thead>
+        <tbody border="1" style="text-align: center;">
+        {% for row in cls_list %}
+
+          <tr>
+            <td>{{ row.id }}</td>
+
+            <td>{{ row.title }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+
+{% endblock %}
+
